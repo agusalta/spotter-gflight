@@ -4,7 +4,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  src: url("/fonts/inter/inter-v19-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/google_sans/inter-v19-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* inter-regular - latin */
@@ -13,7 +13,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/inter/inter-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/google_sans/inter-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* inter-500 - latin */
@@ -22,7 +22,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/inter/inter-v19-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/google_sans/inter-v19-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* inter-700 - latin */
@@ -31,7 +31,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/inter/inter-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/google_sans/inter-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* roboto-300 - latin */
@@ -68,4 +68,38 @@
   font-style: normal;
   font-weight: 700;
   src: url("/fonts/roboto/roboto-v48-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --font-size-hero: 3.5rem;
+  --font-size-title: 2rem;
+  --font-size-subtitle: 1.25rem;
+  --font-size-body: 1rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+.heading-hero {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-medium);
+  color: #222;
+  margin: 0;
+  text-align: center;
+}
+
+.heading-title {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+  color: #222;
+  margin: 0;
+}
+
+.text-body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: #444;
 }

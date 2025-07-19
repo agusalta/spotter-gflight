@@ -4,7 +4,9 @@ const darkPalette = {
   mode: "dark",
   background: {
     default: "#202124", // --color-background
+    secondary: "#2F3033",
     paper: "#303134", // --color-surface
+    card: "#35373A"
   },
   text: {
     primary: "#e8eaed", // --color-text-primary
@@ -14,14 +16,16 @@ const darkPalette = {
     main: "#8ab4f8", // --color-primary
   },
   divider: "#5f6368", // --color-border
-  icon: "#A6C6F9", // --color-icon
+  icon: "#A6C6FA", // --color-icon dark
 };
 
 const lightPalette = {
   mode: "light",
   background: {
-    default: "#f8f9fa", // --color-background
+    default: "#FFFFFF", // --color-background
     paper: "#ffffff", // --color-surface
+    secondary: "#fff",
+    card: "#fff"
   },
   text: {
     primary: "#202124", // --color-text-primary
@@ -31,7 +35,7 @@ const lightPalette = {
     main: "#1a73e8", // --color-primary
   },
   divider: "#dadce0", // --color-border
-  icon: "#0160EE", // --color-icon
+  icon: "#1a73e8", // --color-icon light
 };
 
 export const getTheme = (mode) =>

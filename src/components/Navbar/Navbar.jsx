@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <>
       <AppBar
-        position="static"
+        position="fixed"
         elevation={0}
         sx={{
           backgroundColor: theme.palette.background.default,
@@ -71,11 +71,15 @@ export default function Navbar() {
               fontWeight: "500",
               marginLeft: "40px",
               flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              '@media (max-width:1000px)': {
+                display: 'none',
+              },
             }}
           >
             <NavChip label="Travel" icon={LuggageIcon} />
             <NavChip label="Explore" icon={TravelExploreIcon} />
-            <NavChip label="Flights" icon={FlightIcon} />
+            <NavChip label="Flights" icon={FlightIcon} selected />
             <NavChip label="Hotels" icon={HotelIcon} />
             <NavChip label="Vacation rentals" icon={HouseIcon} />
           </Stack>
@@ -122,6 +126,8 @@ export default function Navbar() {
 
       {/* Navigation Drawer */}
       <NavigationDrawer open={drawerOpen} onClose={handleDrawerToggle} />
+      {/* Espacio para que el contenido no quede oculto detrás del AppBar */}
+      <div style={{ paddingTop: "64px" }} />
     </>
   );
 }

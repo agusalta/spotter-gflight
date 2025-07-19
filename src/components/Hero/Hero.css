@@ -1,0 +1,191 @@
+/* =============================
+   Main Hero styles
+   ============================= */
+.hero-section {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* =============================
+   Main Hero image
+   ============================= */
+.hero-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 63vw;
+  max-width: 900px;
+  min-width: 320px;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  pointer-events: none;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  user-select: none;
+  display: block;
+  filter: drop-shadow(0 4px 24px rgba(0,0,0,0.10));
+}
+
+/* =============================
+   Gradient overlay on the image
+   ============================= */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 100%);
+}
+
+/* =============================
+   Main Hero title
+   ============================= */
+.hero-section_heading.heading-hero {
+  font-weight: 500;
+  font-size: var(--font-size-hero, 3.2rem);
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+  pointer-events: auto;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+
+.hero-title-animated {
+  opacity: 0;
+  animation: fadeInHeroTitle 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+}
+
+.hero-title {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  font-family: "Google Sans Display", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 40px;
+  z-index: 2;
+  pointer-events: auto;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+/* =============================
+   Hero decorative background
+   ============================= */
+.hero-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 68vw;
+  height: 400px;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  pointer-events: none;
+  transform: none;
+  overflow: visible;
+}
+
+.hero-background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  user-select: none;
+  display: block;
+}
+
+/* =============================
+   Flight Search Bar
+   ============================= */
+.flight-search-bar-container {
+    
+}
+
+.flight-search-bar-stack {
+  margin-top: 2rem;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* =============================
+   Animations
+   ============================= */
+@keyframes fadeInHeroTitle {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10%) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* =============================
+   Media Queries
+   ============================= */
+@media screen and (min-width: 720px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-background {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-section {
+    height: 260px;
+  }
+  .hero-image-wrapper {
+    width: 95vw;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .hero-section_heading.heading-hero {
+    font-size: 2.1rem;
+    top: 75%;
+  }
+}
